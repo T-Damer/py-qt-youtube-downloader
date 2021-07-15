@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>YTDownloader</class>
+ <widget class="QMainWindow" name="YTDownloader">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 0);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>640</width>
+     <height>480</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>640</width>
+     <height>480</height>
+    </size>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>611</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QPlainTextEdit" name="plainTextEdit">
+         <property name="styleSheet">
+          <string notr="true">QPlainTextEdit{
+	background-color: rgb(68, 68, 68);
+	color: #fefefe;
+	border-width: 1px;
+	border-color: #ffcc33;
+	border-style: solid;
+	border-radius: 8px;
+	height: 20px;
+}
+
+</string>
+         </property>
+         <property name="plainText">
+          <string>Process...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 204, 51);</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(177, 177, 177);
+color: #000;
+border-width: 1px;
+border-color: #ffcc33;
+border-style: solid;
+height: 30px;</string>
+       </property>
+       <property name="text">
+        <string>Paste youtube URL here...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(68, 68, 68);
+	color: #fff;
+	border-width: 1px;
+	border-color: #ffcc33;
+	border-style: solid;
+	border-radius: 20px;
+	height: 40;
+}
+
+QPushButton:hover {
+	background-color: #646464;
+	color: #fff;
+	border-width: 1px;	
+	border-color: #ffcc33;
+	border-style: solid;
+	border-radius: 20px;
+	height: 40;
+}
+
+QPushButton:pressed {
+	background-color:#fff;
+	color: #000;
+	border-width: 1px;	
+	border-color: #ffcc33;
+	border-style: solid;
+	border-radius: 20px;
+	height: 40;
+}</string>
+       </property>
+       <property name="locale">
+        <locale language="English" country="UnitedStates"/>
+       </property>
+       <property name="text">
+        <string>Choose folder where to save</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(68, 68, 68);
+	color: #fff;
+	border-width: 1px;
+	border-color: #ffcc33;
+	border-style: solid;
+	border-radius: 20px;
+	height: 40;
+}
+
+QPushButton:hover {
+	background-color: #646464;
+	color: rgb(100, 100, 100);
+	color: #fff;
+	border-width: 1px;	
+	border-color: #ffcc33;
+	border-style: solid;
+	border-radius: 20px;
+	height: 40;
+}
+
+QPushButton:pressed {
+	background-color:#fff;
+	color: #000;
+	border-width: 1px;	
+	border-color: #ffcc33;
+	border-style: solid;
+	border-radius: 20px;
+	height: 40;
+}</string>
+       </property>
+       <property name="locale">
+        <locale language="English" country="UnitedStates"/>
+       </property>
+       <property name="text">
+        <string>Download a video</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
