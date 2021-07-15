@@ -1,7 +1,8 @@
 import os
+import re
 import sys
 import youtube_dl
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtWidgets
 from des import *
 
 class downloader(QtCore.QThread):
@@ -15,7 +16,8 @@ class downloader(QtCore.QThread):
         self.mysignal.emit("Download process started!")
 
         with youtube_dl.YoutubeDL({}) as ytdl:
-            ytdl.download([self.url])
+                ytdl.download([self.url])
+                # QtWidgets.QMessageBox.warning(self, "Error", "Paste a correct url")
 
         self.mysignal.emit("Download process finished!")
         self.mysignal.emit("Finish")
@@ -44,9 +46,9 @@ class gui(QtWidgets.QMainWindow):
                 self.mythread.start()
                 self.locker(True)
             else:
-                QtWidgets.QMessageBox.warning(self, "Error, you didn't choose a download folder")
+                QtWidgets.QMessageBox.warning(self, "Error", "You didn't choose a download folder")
         else:
-            QtWidgets.QMessageBox.warning(self, "Error, you didn't specified a download link")
+            QtWidgets.QMessageBox.warning(self, "Error", "You didn't specified a download link")
 
         
     def get_folder(self):
@@ -54,7 +56,7 @@ class gui(QtWidgets.QMainWindow):
         if (self.download_folder != ''):
             os.chdir(self.download_folder)
         else:
-            QtWidgets.QMessageBox.warning(self, "Error, choose a downloader folder")
+            QtWidgets.QMessageBox.warning(self, "Error", "Choose a downloader folder")
 
     def handler(self, value):
         if value == 'finish':
