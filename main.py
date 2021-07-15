@@ -1,5 +1,4 @@
 import os
-import re
 import sys
 import youtube_dl
 from PyQt5 import QtCore, QtWidgets
@@ -16,8 +15,10 @@ class downloader(QtCore.QThread):
         self.mysignal.emit("Download process started!")
 
         with youtube_dl.YoutubeDL({}) as ytdl:
-                ytdl.download([self.url])
-                # QtWidgets.QMessageBox.warning(self, "Error", "Paste a correct url")
+                try: 
+                    ytdl.download([self.url])
+                except:
+                    self.mysignal.emit("Wrong link! Restart the program!")
 
         self.mysignal.emit("Download process finished!")
         self.mysignal.emit("Finish")
