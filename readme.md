@@ -23,4 +23,3 @@ Simple downloader, built with QtDesigner and Python
 3. Edit whatever you want (styles made with RMB on element -> stylesheet. Use CSS to edit)
 4. Convert file to `.py` using `pyuic5 YTWindow.ui -o des.py`
    > Remember to install `pyuic` using `pip install pyuic5-tool` also you must `pip install pyqt5-tools`
-   > Simple downloader, built with QtDesigner and Python
